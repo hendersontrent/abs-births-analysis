@@ -101,11 +101,19 @@ print(p3)
 
 # Pull graphs into publishable figures and export
 
-CairoPNG("output/prelim_fertility_analysis.png", 1000, 1000)
-ggarrange(p, p1, ncol = 1, nrow = 2)
+CairoPNG("output/densities.png", 800, 800)
+print(p)
 dev.off()
 
-CairoPNG("output/pill_introduction.png", 1000, 600)
+CairoPNG("output/time-series.png", 1000, 600)
+print(p1)
+dev.off()
+
+CairoPNG("output/age-smooth.png", 1000, 600)
+print(p2)
+dev.off()
+
+CairoPNG("output/mean-smooth.png", 1000, 600)
 print(p3)
 dev.off()
 
