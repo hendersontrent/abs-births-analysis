@@ -31,6 +31,16 @@ d1 <- d %>%
 
 options(scipen = 999)
 
+# Define a vector of nice colours for each age group to use in plotting
+
+the_palette <- c("15-19" = "#A0E7E5",
+                 "20-24" = "#75E6DA",
+                 "25-29" = "#189AB4",
+                 "30-34" = "#05445E",
+                 "35-39" = "#9571AB",
+                 "40-44" = "#FD62AD",
+                 "45-49" = "#F7C9B6")
+
 # Create an output folder if none exists:
 
 if(!dir.exists('output')) dir.create('output')
