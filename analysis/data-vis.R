@@ -32,7 +32,7 @@ p <- d1 %>%
        y = "Density",
        title = "Distribution of Australian fertility rates by age group from 1921-2015",
        subtitle = "Rate = births per 1,000 women", 
-       caption = "Source: ABS (2008) Australian historical statistics. Age 15-19 includes ages <15 and 45-49 includes ages >49.") +
+       caption = "Source: ABS - Australian historical statistics. Age 15-19 includes ages <15 and 45-49 includes ages >49.") +
   theme_bw() +
   facet_wrap(~age_group) +
   theme(panel.grid.minor = element_blank())
@@ -48,7 +48,7 @@ p1 <- d1 %>%
        title = "Time series of Australian fertility rates by age group from 1921-2015",
        subtitle = "Rate = births per 1,000 women",
        colour = "Age Group",
-       caption = "Source: ABS (2008) Australian historical statistics. Age 15-19 includes ages <15 and 45-49 includes ages >49.") +
+       caption = "Source: ABS - Australian historical statistics. Age 15-19 includes ages <15 and 45-49 includes ages >49.") +
   theme_bw() +
   scale_colour_manual(values = the_palette) +
   theme(legend.position = "bottom")
@@ -89,12 +89,12 @@ pill_plot <- function(data, x_width, y_height){
 
 p2 <- pill_plot(d2, 1972, 210) +
   labs(subtitle = "Rate = births per 1,000 women. Each point is a 5-year age group in time.",
-       caption = "Source: ABS (2008) Australian historical statistics. Age 15-19 includes ages <15 and 45-49 includes ages >49.")
+       caption = "Source: ABS - Australian historical statistics. Age 15-19 includes ages <15 and 45-49 includes ages >49.")
 print(p2)
 
 p3 <- pill_plot(d3, 1968, 115) +
   labs(subtitle = "Rate = births per 1,000 women. Each point is the mean of 5-year age group fertility rates in time.",
-       caption = "Source: ABS (2008) Australian historical statistics.")
+       caption = "Source: ABS - Australian historical statistics.")
 print(p3)
 
 #------------------------EXPORTS-----------------------
