@@ -14,6 +14,9 @@ library(readxl)
 library(janitor)
 library(ggpubr)
 library(Cairo)
+library(scales)
+library(forecast)
+library(data.table)
 
 # Read in data
 
