@@ -147,3 +147,24 @@ plt.tight_layout()
 
 plt.savefig('/Users/trenthenderson/Documents/R/abs-births-analysis/output/catch22-agg-output.png', dpi = 1000)
 
+#%%
+
+#------------- HEATMAP VERSION ------------------------
+
+heat_data = final
+heat_data = heat_data.drop('category', 1) # Remove unnecessary column
+heat_data = heat_data[['category_word', 'names', 'values']] # Reorder columns
+
+heat_data = heat_data.pivot('names', 'category_word', 'values')
+
+plt.figure(figsize=(14,14))
+sns.heatmap(heat_data, annot = True, linewidths = .5, vmin = -10, fmt = '.1f',
+            cmap = 'coolwarm')
+plt.xlabel('')
+plt.ylabel('')
+plt.title('Catch22 time series statistics by broad age group', fontweight = 'bold',
+          fontsize = 24)
+
+plt.tight_layout()
+
+plt.savefig('/Users/trenthenderson/Documents/R/abs-births-analysis/output/catch22-agg-heatmap.png', dpi = 1000)
